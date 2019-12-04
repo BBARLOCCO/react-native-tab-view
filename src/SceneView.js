@@ -73,7 +73,7 @@ export default class SceneView<T: Route> extends React.Component<
 
     // If the value calculated is the current index, we're probably navigating away
     // Get the nearest largest integer which is the index of the route we're navigating to
-    if (next === navigationState.index) {
+    if (next === navigationState.index && (navigationState.index-value)>0.001) {
       next = Math.floor(value);
     }
 
